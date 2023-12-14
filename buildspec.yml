@@ -11,7 +11,11 @@ phases:
       - dotnet build CoreApplicationForAWS/CoreApplicationForAWS.csproj
   post_build:
     commands:
-      - dotnet publish -c Release -o ./app/ CoreApplicationForAWS/CoreApplicationForAWS.csproj
+      #- dotnet publish -c Release -o ./app/ CoreApplicationForAWS/CoreApplicationForAWS.csproj
+       - dotnet publish -c release -o ./build_output CoreApplicationForAWS.csproj
 artifacts:
   files:
-    - '**/*'
+    #- '**/*'
+    - CodeBuild-CoreApplicationForAWS/build_output/**/*
+    - scripts/**/*
+    - Appspec.yml
