@@ -1,9 +1,8 @@
 version: 0.0
 os: windows
 files:
-  - source: \build_output\CoreApplicationForAWS
-    #destination: /home/ec2-user/aspnetcoreapp
-    destination: c:\inetpub\wwwroot
+  - source: \
+    destination: C:\inetpub\wwwroot
     file_exists_behavior: OVERWRITE
   - #source: scripts/virtualhost.conf
     #destination: /home/ec2-user/aspnetcoreapp
