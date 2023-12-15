@@ -9,28 +9,28 @@ files:
     #destination: /inetpub/wwwroot
 hooks:
   ApplicationStop:
-    - location: scripts/stop_service
+    #- location: scripts/stop_service
       timeout: 300
-      runas: root
+     # runas: root
 
   BeforeInstall:
-    - location: scripts/remove_application
+    #- location: scripts/remove_application
       timeout: 300
-      runas: root
+     # runas: root
 
   AfterInstall:
-    - location: scripts/install_dotnetcore
+    #- location: scripts/install_dotnetcore
       timeout: 500
-      runas: root
+     # runas: root
 
-    - location: scripts/install_httpd
+    #- location: scripts/install_httpd
       timeout: 300
-      runas: root
+     # runas: root
 
   ApplicationStart:
-    - location: scripts/start_service
+    #- location: scripts/start_service
       timeout: 300
-      runas: root
+      #runas: root
 #version: 0.0
 #os: windows
 #files:
