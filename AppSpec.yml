@@ -1,12 +1,12 @@
 version: 0.0
 os: linux
 files:
-  - source: CodeBuild-CoreApplicationForAWS/build_output
+  - source: build_output/CoreApplicationForAWS
     #destination: /home/ec2-user/aspnetcoreapp
     destination: /inetpub/wwwroot
-  - source: scripts/virtualhost.conf
+  - #source: scripts/virtualhost.conf
     #destination: /home/ec2-user/aspnetcoreapp
-    destination: /inetpub/wwwroot
+    #destination: /inetpub/wwwroot
 hooks:
   ApplicationStop:
     - location: scripts/stop_service

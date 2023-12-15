@@ -12,7 +12,7 @@ phases:
   post_build:
     commands:
       #- dotnet publish -c Release -o ./app/ CoreApplicationForAWS/CoreApplicationForAWS.csproj
-       - dotnet publish -c release -o ./build_output/CoreApplicationForAWS.csproj
+       - dotnet publish -c release -o ./build_output/CoreApplicationForAWS
 artifacts:
   files:
     #- '**/*'
