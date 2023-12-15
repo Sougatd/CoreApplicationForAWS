@@ -28,6 +28,11 @@ namespace CoreApplicationForAWS.Controllers
 
             return View();
         }
+        public IActionResult TestPage()
+        {
+            ViewData["Message"] = "This is a test message to check update.";
+            return View();
+        }
 
         public IActionResult Privacy()
         {

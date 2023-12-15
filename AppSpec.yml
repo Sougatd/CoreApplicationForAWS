@@ -3,7 +3,7 @@ os: windows
 files:
   - source: \build_output\CoreApplicationForAWS
     destination: C:\Websites\CoreApplication
-    file_exists_behavior: OVERWRITE
+    #file_exists_behavior: OVERWRITE
   #- #source: scripts/virtualhost.conf
     #destination: /home/ec2-user/aspnetcoreapp
     #destination: /inetpub/wwwroot
