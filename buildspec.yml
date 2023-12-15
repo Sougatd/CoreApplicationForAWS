@@ -16,6 +16,6 @@ phases:
 artifacts:
   files:
     #- '**/*'
-    - CodeBuild-CoreApplicationForAWS/build_output/**/*
+    - build_output/**/*
     - scripts/**/*
     - Appspec.yml
