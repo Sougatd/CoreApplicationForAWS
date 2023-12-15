@@ -7,18 +7,18 @@ files:
   - #source: scripts/virtualhost.conf
     #destination: /home/ec2-user/aspnetcoreapp
     #destination: /inetpub/wwwroot
-hooks:
-  ApplicationStop:
+#hooks:
+ # ApplicationStop:
     #- location: scripts/stop_service
      # timeout: 300
      # runas: root
 
-  BeforeInstall:
+ # BeforeInstall:
     #- location: scripts/remove_application
      # timeout: 300
      # runas: root
 
-  AfterInstall:
+ # AfterInstall:
     #- location: scripts/install_dotnetcore
      # timeout: 500
      # runas: root
@@ -27,7 +27,7 @@ hooks:
      # timeout: 300
      # runas: root
 
-  ApplicationStart:
+ # ApplicationStart:
     #- location: scripts/start_service
       #timeout: 300
       #runas: root
