@@ -1,9 +1,9 @@
 version: 0.0
-os: linux
+os: windows
 files:
-  - source: build_output/CoreApplicationForAWS
+  - source: \build_output\CoreApplicationForAWS
     #destination: /home/ec2-user/aspnetcoreapp
-    destination: /inetpub/wwwroot
+    destination: c:\inetpub\wwwroot
   - #source: scripts/virtualhost.conf
     #destination: /home/ec2-user/aspnetcoreapp
     #destination: /inetpub/wwwroot
