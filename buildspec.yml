@@ -1,25 +1,21 @@
 version: 0.2
-env:
-  git-credential-helper: yes
 phases:
   install:
     runtime-versions:
       dotnet: 6.0
-  #pre_build:
-   # commands:
-    #  - dotnet restore CoreApplicationForAWS/CoreApplicationForAWS.csproj
+  pre_build:
+    commands:
+      - dotnet restore CoreApplicationForAWS/CoreApplicationForAWS.csproj
   build:
     commands:
-      #- dotnet build CoreApplicationForAWS/CoreApplicationForAWS.csproj
-      - scripts/codebuild-git-wrapper.sh "$REPO_URL" "$REPO_BRANCH" # These environment variables come from the CFN stack
-      - git log | head -100
-  #post_build:
-   # commands:
+      - dotnet build CoreApplicationForAWS/CoreApplicationForAWS.csproj
+  post_build:
+    commands:
       #- dotnet publish -c Release -o ./app/ CoreApplicationForAWS/CoreApplicationForAWS.csproj
-    #   - dotnet publish -c release -o ./build_output/CoreApplicationForAWS
-#artifacts:
- # files:
+       - dotnet publish -c release -o ./build_output/CoreApplicationForAWS
+artifacts:
+  files:
     #- '**/*'
-  #  - build_output/**/*
-   # - scripts/**/*
-    #- AppSpec.yml
+    - build_output/**/*
+    - scripts/**/*
+    - AppSpec.yml
