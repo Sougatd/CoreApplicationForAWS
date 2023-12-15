@@ -1,7 +1,7 @@
 version: 0.0
 os: windows
 files:
-  - source: \
+  - source: \build_output\CoreApplicationForAWS
     destination: C:\Websites\CoreApplication
     file_exists_behavior: OVERWRITE
   #- #source: scripts/virtualhost.conf
