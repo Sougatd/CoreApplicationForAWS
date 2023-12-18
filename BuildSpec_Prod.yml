@@ -1,0 +1,21 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      dotnet: 6.0
+  pre_build:
+    commands:
+      - dotnet restore CoreApplicationForAWS/CoreApplicationForAWS.csproj
+  build:
+    commands:
+      - dotnet build CoreApplicationForAWS/CoreApplicationForAWS.csproj
+  post_build:
+    commands:
+      #- dotnet publish -c Release -o ./app/ CoreApplicationForAWS/CoreApplicationForAWS.csproj
+       - dotnet publish -c release -o ./build_output/CoreApplicationForAWS
+artifacts:
+  files:
+    #- '**/*'
+    - build_output/**/*
+    - scripts/**/*
+    - AppSpec.yml
