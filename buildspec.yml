@@ -19,3 +19,7 @@ artifacts:
     - build_output/**/*
     - scripts/**/*
     - AppSpec.yml
+
+  permissions:
+    - object: /build_output/CoreApplicationForAWS
+      except: [web.config]
