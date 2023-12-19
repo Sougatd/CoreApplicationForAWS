@@ -16,9 +16,10 @@ phases:
 artifacts:
   files:
     #- '**/*'
-    - build_output/**/*
-    - scripts/**/*
-    - AppSpec.yml
+    #- build_output/**/*
+    - git diff --name-only HEAD HEAD~1
+    #- scripts/**/*
+    #- AppSpec.yml
 
   #permissions:
   #  - object: /build_output/CoreApplicationForAWS
