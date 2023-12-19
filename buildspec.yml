@@ -17,7 +17,7 @@ artifacts:
   files:
     #- '**/*'
     #- build_output/**/*
-    - git diff --name-only HEAD HEAD~1
+    git diff --name-only HEAD HEAD~1
     #- scripts/**/*
     #- AppSpec.yml
 
