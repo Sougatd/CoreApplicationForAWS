@@ -16,12 +16,13 @@ phases:
        - dotnet publish -c release -o ./build_output/CoreApplicationForAWS
 artifacts:
   files:
-     - folders="/build_output/CoreApplicationForAWS"
+     - folders="/"
      - for value in $(folders);
        do
-       if [$value !="/build_output/CoreApplicationForAWS/web.config"]; then
+        echo $value;
+        if [$value !="/build_output/CoreApplicationForAWS/web.config"]; then
           $value
-       fi
+        fi
        done
      - scripts/**/*
      - AppSpec.yml
