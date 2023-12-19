@@ -1,4 +1,7 @@
 version: 0.2
+env:
+  variables:
+    changed_folders=$(git diff --dirstat=files,0 HEAD~1 | awk '{print $2}' | xargs -I {} dirname {} | awk -F '/' '{print $1}' | sort | uniq)
 phases:
   install:
     runtime-versions:
@@ -9,18 +12,14 @@ phases:
   build:
     commands:
       - dotnet build CoreApplicationForAWS/CoreApplicationForAWS.csproj
+      - changed_folders=$(git diff --dirstat=files0 HEAD~1 | awk 'print $2' | xargs -I  dirname  | awk -F '/' 'print $1' | sort | uniq)
+      - echo $changed_folders
   post_build:
     commands:
       #- dotnet publish -c Release -o ./app/ CoreApplicationForAWS/CoreApplicationForAWS.csproj
        - dotnet publish -c release -o ./build_output/CoreApplicationForAWS
 artifacts:
   files:
-    #- '**/*'
-    #- build_output/**/*
-    git diff --name-only HEAD HEAD~1
-    #- scripts/**/*
-    #- AppSpec.yml
-
-  #permissions:
-  #  - object: /build_output/CoreApplicationForAWS
-  #    except: [web.config]
+     
+     - scripts/**/*
+     - AppSpec.yml
