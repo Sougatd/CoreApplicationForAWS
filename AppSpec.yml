@@ -4,8 +4,12 @@ files:
   - source: \build_output\CoreApplicationForAWS
     destination: C:\Websites\CoreApplication
     overwrite: merge
-    except:
-      - /build_output/CoreApplicationForAWS/*.json
+permissions:
+  - object: /build_output/CoreApplicationForAWS/*.json
+    owner: windows
+    mode: 750
+    #except:
+     # - /build_output/CoreApplicationForAWS/*.json
     #file_exists_behavior: OVERWRITE
   #- #source: scripts/virtualhost.conf
     #destination: /home/ec2-user/aspnetcoreapp
