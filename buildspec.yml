@@ -27,6 +27,9 @@ artifacts:
   except:
     - build_output/CoreApplicationForAWS/web.config
     - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
+  ignore:
+    - build_output/CoreApplicationForAWS/web.config
+    - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
   files:
      - build_output/**/*
      #- folders="/"
