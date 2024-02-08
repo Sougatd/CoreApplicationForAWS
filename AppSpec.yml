@@ -4,10 +4,10 @@ files:
   - source: \build_output\CoreApplicationForAWS
     destination: C:\Websites\CoreApplication
     overwrite: merge
-permissions:
-  - object: /build_output/CoreApplicationForAWS/*.json
-    owner: windows
-    mode: 750
+#permissions:
+ # - object: /build_output/CoreApplicationForAWS/*.json
+#    owner: windows
+#    mode: 750
     #except:
      # - /build_output/CoreApplicationForAWS/*.json
     #file_exists_behavior: OVERWRITE
