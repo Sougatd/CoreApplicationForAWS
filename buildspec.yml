@@ -25,5 +25,6 @@ artifacts:
      #     $value
      #   fi
      #  done
+     # test comment
      - scripts/**/*
      - AppSpec.yml
