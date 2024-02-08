@@ -28,3 +28,4 @@ artifacts:
      # test comment
      - scripts/**/*
      - AppSpec.yml
+     - !*.config
