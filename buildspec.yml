@@ -14,6 +14,8 @@ phases:
     commands:
       #- dotnet publish -c Release -o ./app/ CoreApplicationForAWS/CoreApplicationForAWS.csproj
        - dotnet publish -c release -o ./build_output/CoreApplicationForAWS
+    ignore:
+       - *.config
 artifacts:
   files:
      - build_output/**/*
