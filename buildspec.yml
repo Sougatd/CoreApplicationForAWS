@@ -24,6 +24,7 @@ artifacts:
   exclude_files:
     - build_output/CoreApplicationForAWS/web.config
     - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
+    - CoreApplicationForAWS/appsettings.json
   except:
     - build_output/CoreApplicationForAWS/web.config
     - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
