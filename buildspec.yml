@@ -21,18 +21,19 @@ phases:
         - "*.config"
      
 artifacts:
-  files:
-     - build_output/**/*
+  #files:
+   #  - build_output/**/*
      #- folders="/"
      #- for dir in build_output/CoreApplicationForAWS/*; do echo "$dir"; if [ -f "$dir"/web.config ]; then "$dir"; fi; done
      #- for value in $(folders);do echo $value;if [$value !="/build_output/CoreApplicationForAWS/web.config"]; then $value; fi;done
      # test comment
-     - scripts/**/*
-     - AppSpec.yml
+    # - scripts/**/*
+    # - AppSpec.yml
    #  - !*.config
-  name: Sougat-$(date +%Y-%m-%d) 
- # path: |
-  #  build_output/**/*
-   # scripts/**/*
-    
+  #name: Sougat-$(date +%Y-%m-%d) 
+  paths: 
+    - build_output/**/*
+    - scripts/**/*
+  exclude:
+    - build_output/**/*.config
   #  !build_output/*/*.config
