@@ -21,7 +21,7 @@ phases:
       #  - "*.config"
      
 artifacts:
-  exclude:
+  exclude_files:
     - build_output/CoreApplicationForAWS/web.config
     - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
   except:
