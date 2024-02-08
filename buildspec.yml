@@ -16,7 +16,7 @@ phases:
        - dotnet publish -c release -o ./build_output/CoreApplicationForAWS
 artifacts:
   files:
-     - build_output/**/*
+   #  - build_output/**/*
      #- folders="/"
      #- for value in $(folders);
      #  do
@@ -26,8 +26,11 @@ artifacts:
      #   fi
      #  done
      # test comment
-     - scripts/**/*
+   #  - scripts/**/*
      - AppSpec.yml
-     - !*.config
-  path:
+   #  - !*.config
+  path: |
+    build_output/**/*
+    scripts/**/*
+    
     !build_output/*/*.config
