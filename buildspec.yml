@@ -21,16 +21,7 @@ phases:
       #  - "*.config"
      
 artifacts:
-  exclude_files:
-    - build_output/CoreApplicationForAWS/web.config
-    - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
-    - CoreApplicationForAWS/appsettings.json
-  except:
-    - build_output/CoreApplicationForAWS/web.config
-    - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
-  ignore:
-    - build_output/CoreApplicationForAWS/web.config
-    - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
+  
   files:
      - build_output/**/*
      #- folders="/"
@@ -47,3 +38,19 @@ artifacts:
    # - scripts/**/*
   
   #  !build_output/*/*.config
+  exclude_files:
+    - build_output/CoreApplicationForAWS/web.config
+    - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
+    - CoreApplicationForAWS/appsettings.json
+  exclude:
+    - build_output/CoreApplicationForAWS/web.config
+    - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
+    - CoreApplicationForAWS/appsettings.json
+  except:
+    - build_output/CoreApplicationForAWS/web.config
+    - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
+    - CoreApplicationForAWS/appsettings.json
+  ignore:
+    - build_output/CoreApplicationForAWS/web.config
+    - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
+    - CoreApplicationForAWS/appsettings.json
