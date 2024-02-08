@@ -39,18 +39,18 @@ artifacts:
   
   #  !build_output/*/*.config
   exclude_files:
-    - build_output/CoreApplicationForAWS/web.config
-    - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
-    - CoreApplicationForAWS/appsettings.json
+   # - build_output/CoreApplicationForAWS/web.config
+    #- build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
+    - CoreApplicationForAWS/CoreApplicationForAWS/appsettings.json
   exclude:
-    - build_output/CoreApplicationForAWS/web.config
-    - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
+   # - build_output/CoreApplicationForAWS/web.config
+   # - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
     - CoreApplicationForAWS/CoreApplicationForAWS/appsettings.json
   except:
-    - build_output/CoreApplicationForAWS/web.config
-    - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
-    - CoreApplicationForAWS/appsettings.json
+   # - build_output/CoreApplicationForAWS/web.config
+  #  - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
+    - CoreApplicationForAWS/CoreApplicationForAWS/appsettings.json
   ignore:
-    - build_output/CoreApplicationForAWS/web.config
-    - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
-    - CoreApplicationForAWS/appsettings.json
+  #  - build_output/CoreApplicationForAWS/web.config
+  #  - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
+    - CoreApplicationForAWS/CoreApplicationForAWS/appsettings.json
