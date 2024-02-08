@@ -30,7 +30,7 @@ artifacts:
      # test comment
      - scripts/**/*
      - AppSpec.yml
-     - buildspec.yml
+    # - buildspec.yml
    #  - !*.config
   #name: Sougat-$(date +%Y-%m-%d) 
   #paths: 
@@ -38,19 +38,19 @@ artifacts:
    # - scripts/**/*
   
   #  !build_output/*/*.config
-  exclude_files:
+  #exclude_files:
    # - build_output/CoreApplicationForAWS/web.config
     #- build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
-    - CoreApplicationForAWS/CoreApplicationForAWS/appsettings.json
+   # - CoreApplicationForAWS/CoreApplicationForAWS/appsettings.json
   exclude:
    # - build_output/CoreApplicationForAWS/web.config
    # - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
     - CoreApplicationForAWS/CoreApplicationForAWS/appsettings.json
-  except:
+ # except:
    # - build_output/CoreApplicationForAWS/web.config
   #  - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
-    - CoreApplicationForAWS/CoreApplicationForAWS/appsettings.json
-  ignore:
+  #  - CoreApplicationForAWS/CoreApplicationForAWS/appsettings.json
+ # ignore:
   #  - build_output/CoreApplicationForAWS/web.config
   #  - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
-    - CoreApplicationForAWS/CoreApplicationForAWS/appsettings.json
+ #   - CoreApplicationForAWS/CoreApplicationForAWS/appsettings.json
