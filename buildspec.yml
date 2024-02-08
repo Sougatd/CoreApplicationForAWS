@@ -19,7 +19,7 @@ phases:
     rules:
       - changes:
         - "*.config"
-        when: never
+        when: always
 artifacts:
   files:
      - build_output/**/*
