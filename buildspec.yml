@@ -18,19 +18,14 @@ artifacts:
   files:
    #  - build_output/**/*
      - folders="/"
-     - for value in $(folders);
-       do
-        echo $value;
-        if [$value !="/build_output/CoreApplicationForAWS/web.config"]; then
-          $value
-        fi
-       done
+     
+     - for value in $(folders);do echo $value;if [$value !="/build_output/CoreApplicationForAWS/web.config"]; then $value; fi;done
      # test comment
    #  - scripts/**/*
      - AppSpec.yml
    #  - !*.config
-  path: |
-    build_output/**/*
-    scripts/**/*
+ # path: |
+  #  build_output/**/*
+   # scripts/**/*
     
-    !build_output/*/*.config
+  #  !build_output/*/*.config
