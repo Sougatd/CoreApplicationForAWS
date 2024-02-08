@@ -18,7 +18,7 @@ phases:
      #  - CoreApplicationForAWS/web.config
     rules:
       - changes:
-        - "*.yml"
+        - "*.config"
         when: never
 artifacts:
   files:
