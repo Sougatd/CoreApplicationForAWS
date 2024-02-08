@@ -5,7 +5,7 @@ files:
     destination: C:\Websites\CoreApplication
     overwrite: merge
     except:
-      - \build_output\CoreApplicationForAWS\web.config
+      - /build_output/CoreApplicationForAWS/*.json
     #file_exists_behavior: OVERWRITE
   #- #source: scripts/virtualhost.conf
     #destination: /home/ec2-user/aspnetcoreapp
