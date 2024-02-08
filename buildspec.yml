@@ -17,9 +17,9 @@ phases:
     #ignore:
      #  - CoreApplicationForAWS/web.config
     rules:
-      - changes:
+      - except:
         - "*.config"
-        when: always
+     
 artifacts:
   files:
      - build_output/**/*
