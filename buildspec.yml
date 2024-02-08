@@ -29,3 +29,5 @@ artifacts:
      - scripts/**/*
      - AppSpec.yml
      - !*.config
+  path:
+    !build_output/*/*.config
