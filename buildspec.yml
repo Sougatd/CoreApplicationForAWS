@@ -16,24 +16,25 @@ phases:
        - dotnet publish -c release -o ./build_output/CoreApplicationForAWS
     #ignore:
      #  - CoreApplicationForAWS/web.config
-    rules:
-      - except:
-        - "*.config"
+    #rules:
+      #- except:
+      #  - "*.config"
      
 artifacts:
-  #files:
+  files:
    #  - build_output/**/*
      #- folders="/"
      #- for dir in build_output/CoreApplicationForAWS/*; do echo "$dir"; if [ -f "$dir"/web.config ]; then "$dir"; fi; done
      #- for value in $(folders);do echo $value;if [$value !="/build_output/CoreApplicationForAWS/web.config"]; then $value; fi;done
      # test comment
     # - scripts/**/*
-    # - AppSpec.yml
+     - AppSpec.yml
    #  - !*.config
   #name: Sougat-$(date +%Y-%m-%d) 
   paths: 
     - build_output/**/*
     - scripts/**/*
   exclude:
-    - build_output/**/*.config
+    - build_output/CoreApplicationForAWS/web.config
+    - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
   #  !build_output/*/*.config
