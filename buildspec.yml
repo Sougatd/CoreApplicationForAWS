@@ -42,10 +42,10 @@ artifacts:
    # - build_output/CoreApplicationForAWS/web.config
     #- build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
    # - CoreApplicationForAWS/CoreApplicationForAWS/appsettings.json
-  exclude:
+  excluded_paths:
    # - build_output/CoreApplicationForAWS/web.config
    # - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
-    - wwwroot/**
+    - build_output/CoreApplicationForAWS/wwwroot/
  # except:
    # - build_output/CoreApplicationForAWS/web.config
   #  - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
