@@ -4,7 +4,7 @@ files:
   - source: \build_output\CoreApplicationForAWS
     destination: C:\Websites\CoreApplication
     overwrite: merge
-    exclude:
+    except:
       - \build_output\CoreApplicationForAWS\web.config
 #permissions:
  # - object: /build_output/CoreApplicationForAWS/*.json
