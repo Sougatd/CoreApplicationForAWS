@@ -48,6 +48,7 @@ artifacts:
     - "**/*.json"
     - "**/wwwroot/**/*"
     - "**/*.config"
+  discard-paths: yes
  # except:
    # - build_output/CoreApplicationForAWS/web.config
   #  - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
