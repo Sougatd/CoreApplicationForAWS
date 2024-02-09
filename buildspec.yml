@@ -45,8 +45,8 @@ artifacts:
   exclude-paths: #"**/wwwroot/**/*"
    # - build_output/CoreApplicationForAWS/web.config
    # - build_output/CoreApplicationForAWS/CoreApplicationForAWS.pdb
-    - "**/wwwroot/**/*"
     - "**/.json"
+    - "**/wwwroot/**/*"
     - "**/.config"
  # except:
    # - build_output/CoreApplicationForAWS/web.config
