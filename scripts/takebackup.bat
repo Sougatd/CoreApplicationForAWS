@@ -15,5 +15,6 @@ set _foldername=%CUR_YYYY%%CUR_MM%%CUR_DD%-%CUR_HH%%CUR_NN%%CUR_SS%
 
 rem /i option is needed to avoid the batch file asking you whether destination folder is a file or a folder
 rem /e option is needed to copy also all folders and subfolders
-xcopy "C:\Websites\CoreApplication" "C:\Website backup\%_foldername%"  /i /e /y
-copy "D:\Pro Sougat\CRF\try2.txt" "D:\Pro Sougat\CRF\temp"
+xcopy "C:\Websites\CoreApplication" "C:\Website backup\Application Backup\%_foldername%"  /i /e /y
+copy "C:\Websites\CoreApplication\*.config" "C:\Website backup\Config Backup"
+copy "C:\Websites\CoreApplication\*.json" "C:\Website backup\Config Backup"
