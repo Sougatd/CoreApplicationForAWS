@@ -23,7 +23,7 @@ hooks:
      # runas: root
 
   BeforeInstall:
-    - location: scripts/takebackup.bat
+    - location: scripts/BeforeInstall/BeforeInstall.exe
       timeout: 500
      # runas: root
 
