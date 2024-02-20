@@ -2,7 +2,9 @@ version: 0.0
 os: windows
 files:
   - source: \build_output\CoreApplicationForAWS
-    destination: C:\Websites\CoreApplication
+    destination: 
+      - C:\Websites\CoreApplication
+      - C:\Websites\CoreApplication2
     overwrite: merge
 exclude: 
   - \build_output\CoreApplicationForAWS\
